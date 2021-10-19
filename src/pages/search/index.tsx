@@ -39,7 +39,7 @@ const SearchPage = () => {
 	return (
 		<div className='flex-grow'>
 			{isLoading && <Spin size='large' />}
-			{data && data.map((d) => <p>{d.name}</p>)}
+			{data && data.map((d) => <p key={d.id}>{d.name}</p>)}
 		</div>
 	);
 };
