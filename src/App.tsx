@@ -10,12 +10,10 @@ function App() {
 		<BrowserRouter>
 			<div className='relative min-h-screen antialiased flex flex-col bg-white'>
 				<Navbar />
-				<div className='flex-grow'>
-					<Switch>
-						<Route exact path='/' component={LandingPage} />
-						<Route exact path='/search' component={SearchPage} />
-					</Switch>
-				</div>
+				<Switch>
+					<Route exact path='/' component={LandingPage} />
+					<Route exact path='/search' component={SearchPage} />
+				</Switch>
 				<Footer />
 			</div>
 		</BrowserRouter>
