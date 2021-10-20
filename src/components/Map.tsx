@@ -68,7 +68,7 @@ const Map: React.FC<IMapProps> = ({ venues = [] }) => {
 		return formattedPoints;
 	}, [venues]);
 
-	const { clusters } = useSupercluster({
+	const { clusters, supercluster } = useSupercluster({
 		points,
 		bounds,
 		zoom,
@@ -108,7 +108,15 @@ const Map: React.FC<IMapProps> = ({ venues = [] }) => {
 								title={pointCount.toString()}
 								visible={true}
 								label={pointCount.toString()}
-								zIndex={1000}></Marker>
+								zIndex={1000}
+								onClick={() => {
+									if (mapRef && mapRef.current) {
+										const expansionZoom = Math.min(supercluster.getClusterExpansionZoom(cluster.id), 20);
+										mapRef.current.setZoom(expansionZoom);
+										mapRef.current.panTo({ lat, lng });
+									}
+								}}
+							/>
 						);
 					} else {
 						return (
