@@ -3,6 +3,7 @@ import { useQuery } from 'react-query';
 import { useLocation } from 'react-router-dom';
 import { FSQApi, FSQ_CLIENT_ID, FSQ_CLIENT_SECRET, FSQ_VERSION } from 'src/config';
 import { ISearchVenue } from 'src/types/searchVenues';
+import Map from 'src/components/Map';
 import querystring from 'querystring';
 import { Spin } from 'antd';
 
@@ -38,8 +39,9 @@ const SearchPage = () => {
 
 	return (
 		<div className='flex-grow'>
-			{isLoading && <Spin size='large' />}
-			{data && data.map((d) => <p key={d.id}>{d.name}</p>)}
+			{/* {isLoading && <Spin size='large' />}
+			{data && data.map((d) => <p key={d.id}>{d.name}</p>)} */}
+			<Map />
 		</div>
 	);
 };
