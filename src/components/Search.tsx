@@ -12,7 +12,7 @@ const Search = () => {
 	const [value, setValue] = useState(queryText || '');
 
 	const onSearch = (value: any) => {
-		if (value) history.push(`search?query=${value}`);
+		if (value) history.push(`/?query=${value}`);
 	};
 
 	return (
