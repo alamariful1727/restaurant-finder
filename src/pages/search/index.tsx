@@ -5,7 +5,6 @@ import { FSQApi, FSQ_CLIENT_ID, FSQ_CLIENT_SECRET, FSQ_VERSION } from 'src/confi
 import { ISearchVenue } from 'src/types/searchVenues';
 import Map from 'src/components/Map';
 import querystring from 'querystring';
-import { Spin } from 'antd';
 
 const fetchData = async (query: string) => {
 	let q = {
@@ -27,7 +26,7 @@ const SearchPage = () => {
 	const queryObject = new URLSearchParams(location.search);
 	const queryText = queryObject.get('query');
 
-	const { isLoading, data } = useQuery<ISearchVenue[], Error>(
+	const { data, isLoading, isFetching } = useQuery<ISearchVenue[], Error>(
 		['search-venues', queryText],
 		() => fetchData(queryText!),
 		{
@@ -39,9 +38,7 @@ const SearchPage = () => {
 
 	return (
 		<div className='flex-grow'>
-			{/* {isLoading && <Spin size='large' />}
-			{data && data.map((d) => <p key={d.id}>{d.name}</p>)} */}
-			<Map />
+			<Map venues={data} isLoading={isLoading} isFetching={isFetching} />
 		</div>
 	);
 };
