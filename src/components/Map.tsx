@@ -3,6 +3,7 @@ import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import { GOOGLE_API_KEY } from 'src/config';
 import { ISearchVenue } from 'src/types/searchVenues';
 import { Drawer } from 'antd';
+import SingleVenueDetails from './SingleVenueDetails';
 
 const center = {
 	lat: 23.779197,
@@ -49,14 +50,7 @@ const Map: React.FC<IMapProps> = ({ venues }) => {
 					))}
 			</GoogleMap>
 			<Drawer width={320} placement='right' onClose={() => setSelectedVenue(undefined)} visible={!!selectedVenue}>
-				{selectedVenue && (
-					<div className='space-y-5'>
-						<div className='text-xl text-gray-500'>Restaurant Details</div>
-						<div>
-							<h1 className='text-blue-500 text-lg font-semibold'>{selectedVenue.name}</h1>
-						</div>
-					</div>
-				)}
+				{selectedVenue && <SingleVenueDetails venue={selectedVenue} />}
 			</Drawer>
 		</React.Fragment>
 	);
