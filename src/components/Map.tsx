@@ -6,8 +6,8 @@ import { Drawer } from 'antd';
 import SingleVenueDetails from './SingleVenueDetails';
 
 const center = {
-	lat: 23.779197,
-	lng: 90.4012843,
+	lat: 23.781517,
+	lng: 90.4005155,
 };
 const zoom = 15;
 
@@ -31,6 +31,15 @@ const Map: React.FC<IMapProps> = ({ venues }) => {
 	return (
 		<React.Fragment>
 			<GoogleMap mapContainerStyle={{ height: 'calc(100vh - 101px)' }} zoom={zoom} center={center}>
+				<Marker
+					position={{ lat: center.lat, lng: center.lng }}
+					icon={{
+						url: '/monsterLab.png',
+						origin: new window.google.maps.Point(0, 0),
+						scaledSize: new window.google.maps.Size(50, 50),
+					}}
+					title='Monstarlab Bangladesh'
+				/>
 				{venues &&
 					venues.length > 0 &&
 					venues.map((venue) => (
