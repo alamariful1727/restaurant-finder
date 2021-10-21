@@ -6,7 +6,7 @@
   </a>
 </p>
 <h1 align="center"><img src="./public/restaurant.svg" width="40px" alt="Restaurant Finder"/> <span>Restaurant Finder</span> <img src="./public/restaurant.svg" width="40px" alt="Restaurant Finder"/></h1>
-<p align="center">Start your project with Single Command</p>
+<p align="center">Start this project with Single Command</p>
 
 <p align="center">
 <!-- <a href="https://github.com/alamariful1727/restaurant-finder/blob/main/LICENSE" title="License">
@@ -87,12 +87,9 @@ bonding. Through this application, they can easily search restaurents nearby (wi
 
 ## Getting Started
 
-Instructions to setup this project locally. To get a local copy up and
-running follow these simple example steps.
+Instructions to setup this project locally. To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
 
 - [Node.js](https://nodejs.org/en/download/)
 - Yarn
