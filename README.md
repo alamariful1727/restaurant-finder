@@ -2,10 +2,10 @@
 <br/>
 <p align="center">
   <a href="https://github.com/alamariful1727/restaurant-finder" title="Restaurant Finder">
-    <img src="https://restauranfinder.netlify.app/logo.png" width="80px" alt="Restaurant Finder"/>
+    <img src="./public/logo.png" width="80px" alt="Restaurant Finder"/>
   </a>
 </p>
-<h1 align="center"><img src="https://restauranfinder.netlify.app/restaurant.svg" width="40px" alt="Restaurant Finder"/> <span>Restaurant Finder</span> <img src="https://restauranfinder.netlify.app/restaurant.svg" width="40px" alt="Restaurant Finder"/></h1>
+<h1 align="center"><img src="./public/restaurant.svg" width="40px" alt="Restaurant Finder"/> <span>Restaurant Finder</span> <img src="./public/restaurant.svg" width="40px" alt="Restaurant Finder"/></h1>
 <p align="center">Start your project with Single Command</p>
 
 <p align="center">
@@ -38,7 +38,7 @@
 </a>
 </p>
 
-<p align="center" title="Restaurant Finder"><img src="#" alt="Restaurant Finder GIF"/></p>
+<p align="center" title="Restaurant Finder"><img src="./public/restaurant_finder.gif" alt="Restaurant Finder GIF"/></p>
 
 <p align="center">
     <a href="https://restauranfinder.netlify.app">View Demo</a>
@@ -72,6 +72,8 @@ bonding. Through this application, they can easily search restaurents nearby (wi
 ### Built With
 
 - [React.js](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 - [Ant Design](https://ant.design/)
 - [Google Map](https://developers.google.com/maps/)
 - [FOURSQUARE Places API](https://developer.foursquare.com/docs/places-api/)
@@ -82,8 +84,6 @@ bonding. Through this application, they can easily search restaurents nearby (wi
 - [Use Supercluster](https://www.npmjs.com/package/use-supercluster/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## Getting Started
 
@@ -161,6 +161,51 @@ This is an example of how to list things you need to use the software and how to
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Future works
+## Future Updates
+
+- [ ] Search nearby venus by using user's current location
+
+- [ ] Search nearby venus by using user's custom location input
+
+- [ ] Add more information in single venue view
+
+- [ ] Add splash screens for PWA
+
+- [ ] Add MIT License
+
+<!-- - [x] Add Project to WorkSpaces -->
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any
+contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also
+simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a <a href="https://github.com/alamariful1727/restaurant-finder/pulls">Pull Request</a>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+-->
+
+## Contact
+
+**Ariful Alam**
+
+[![Gmail Badge](https://img.shields.io/badge/-alamariful1727-A9A9A9?style=flat-square&logo=Gmail&logoColor=red&link=mailto:vsasvipul@gmail.com)](mailto:alamariful1727@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-alamariful1727-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/alamariful1727/)](https://www.linkedin.com/in/alamariful1727/)
+[![Facebook Badge](https://img.shields.io/badge/-alamariful1727-3b5998?style=flat-square&logo=Facebook&logoColor=white&link=https://www.facebook.com/alamariful1727)](https://www.facebook.com/alamariful1727)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
