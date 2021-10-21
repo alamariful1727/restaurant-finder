@@ -5,6 +5,7 @@ import { FSQApi, FSQ_CLIENT_ID, FSQ_CLIENT_SECRET, FSQ_VERSION } from 'src/confi
 import { ISearchVenue } from 'src/types/searchVenues';
 import Map from 'src/components/Map';
 import querystring from 'querystring';
+import SingleVenueDetails from 'src/components/SingleVenueDetails';
 
 const fetchData = async (query: string) => {
 	let q = {
@@ -39,6 +40,7 @@ const SearchPage = () => {
 	return (
 		<div className='flex-grow'>
 			<Map venues={data} isLoading={isLoading} isFetching={isFetching} />
+			<SingleVenueDetails />
 		</div>
 	);
 };
