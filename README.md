@@ -55,7 +55,7 @@
 Monstar Lab Bangladesh have a team party every month, every team goes out and has lunch together to strengthen team
 bonding. Through this application, they can easily search restaurents nearby (within 3 km).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ### Features
 
@@ -67,7 +67,7 @@ bonding. Through this application, they can easily search restaurents nearby (wi
 
 - **Instead of showing all restaurents at a time, we have CLUSTER support.**
 - **PWA support.**
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ### Built With
 
@@ -83,7 +83,7 @@ bonding. Through this application, they can easily search restaurents nearby (wi
 - [Supercluster](https://www.npmjs.com/package/supercluster/)
 - [Use Supercluster](https://www.npmjs.com/package/use-supercluster/)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ## Getting Started
 
@@ -121,6 +121,7 @@ This is an example of how to list things you need to use the software and how to
     REACT_APP_FSQ_VERSION=20190425
     REACT_APP_GOOGLE_API_KEY=<ENTER GOOGLE MAP API KEY>
    ```
+   <p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ## Development
 
@@ -133,7 +134,7 @@ This is an example of how to list things you need to use the software and how to
   yarn watch:css
   ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ## Test
 
@@ -142,7 +143,7 @@ This is an example of how to list things you need to use the software and how to
   yarn test
   ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ## Production
 
@@ -155,11 +156,51 @@ This is an example of how to list things you need to use the software and how to
   yarn build
   ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
-## Technical summary & architecture
+## Technical Summary & Architecture
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="center" title="Restaurant Finder Architecture"><img src="./public/Restaurant Finder Architecture.jpg" alt="Restaurant Finder GIF"/></p>
+
+### **TypeScript**
+
+Static type checking, better intelliSense, better refactoring, Less amount of undefined errors & Better readability and
+maintainability.
+
+### **Redux Toolkit**
+
+For efficient Redux development.
+
+### **Tailwindcss**
+
+Optimized for production with minified and purged css.
+
+### **Workbox**
+
+A production-ready service worker for your Progressive Web App.
+
+### **GCP Credential**
+
+Two types of restrictions have been applied to the credential.
+
+- Application restrictions
+  - Website restrictions
+    - https://restauranfinder.netlify.app/
+    - http://localhost:3000/
+- API restrictions
+  - Restrict key
+    - Maps JavaScript API
+
+### **Google Map**
+
+`@react-google-maps/api` package has been used for Google Map rendering.
+
+### **Cluster**
+
+Instead of showing all restaurents at a time, we have used CLUSTER.<br> `supercluster` & `use-supercluster` packages
+have been used for clustering.
+
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ## Future Updates
 
@@ -175,7 +216,7 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- - [x] Add Project to WorkSpaces -->
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 ## Contributing
 
@@ -191,13 +232,13 @@ simply open an issue with the tag "enhancement". Don't forget to give the projec
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a <a href="https://github.com/alamariful1727/restaurant-finder/pulls">Pull Request</a>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 
 <!-- ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
 -->
 
 ## Contact
@@ -208,4 +249,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [![Linkedin Badge](https://img.shields.io/badge/-alamariful1727-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/alamariful1727/)](https://www.linkedin.com/in/alamariful1727/)
 [![Facebook Badge](https://img.shields.io/badge/-alamariful1727-3b5998?style=flat-square&logo=Facebook&logoColor=white&link=https://www.facebook.com/alamariful1727)](https://www.facebook.com/alamariful1727)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">👆🏻</a>)</p>
