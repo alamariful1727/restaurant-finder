@@ -7,15 +7,19 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.css';
 import './styles/index.css';
+import { Provider } from 'react-redux';
+import { store } from './stores';
 
 const queryClient = new QueryClient();
 
 ReactDOM.render(
 	<React.StrictMode>
-		<QueryClientProvider client={queryClient}>
-			<App />
-			{process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
-		</QueryClientProvider>
+		<Provider store={store}>
+			<QueryClientProvider client={queryClient}>
+				<App />
+				{process.env.NODE_ENV === 'development' && <ReactQueryDevtools initialIsOpen={false} />}
+			</QueryClientProvider>
+		</Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
 );
