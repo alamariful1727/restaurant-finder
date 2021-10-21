@@ -2,9 +2,9 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
 import { GOOGLE_API_KEY } from 'src/config';
 import { ISearchVenue } from 'src/types/searchVenues';
-import { Drawer } from 'antd';
-import SingleVenueDetails from './SingleVenueDetails';
 import useSupercluster from 'use-supercluster';
+import { useAppDispatch } from './hooks/redux';
+import { selectVenue } from 'src/stores/VenueReducer';
 
 const center = {
 	lat: 23.781517,
@@ -18,7 +18,7 @@ interface IMapProps {
 }
 
 const Map: React.FC<IMapProps> = ({ venues = [] }) => {
-	const [selectedVenue, setSelectedVenue] = useState<ISearchVenue>();
+	const dispatch = useAppDispatch();
 	const [bounds, setBounds] = useState<number[]>();
 	const [zoom, setZoom] = useState(15);
 	const { isLoaded, loadError } = useLoadScript({
@@ -29,18 +29,18 @@ const Map: React.FC<IMapProps> = ({ venues = [] }) => {
 	const onMapLoad = useCallback((map: google.maps.Map) => {
 		mapRef.current = map;
 	}, []);
-	// const panTo = useCallback((data: { lat: number; lng: number }) => {
-	// 	if (mapRef && mapRef.current) {
-	// 		mapRef.current.panTo(data);
-	// 		mapRef.current.setZoom(14);
-	// 	}
-	// }, []);
+
+	const handleSelectVenue = (venue: ISearchVenue) => {
+		dispatch(selectVenue(venue));
+	};
+
 	const onZoomChanged = useCallback(() => {
 		if (mapRef && mapRef.current) {
 			const z = mapRef.current.getZoom();
 			setZoom(z || zoom);
 		}
 	}, [zoom]);
+
 	const onBoundsChanged = useCallback(() => {
 		if (mapRef && mapRef.current) {
 			const b = mapRef.current.getBounds();
@@ -132,16 +132,13 @@ const Map: React.FC<IMapProps> = ({ venues = [] }) => {
 									cluster.properties.venue.location.distance / 1000
 								).toFixed(2)} km`}
 								onClick={() => {
-									setSelectedVenue(cluster.properties.venue);
+									handleSelectVenue(cluster.properties.venue);
 								}}
 							/>
 						);
 					}
 				})}
 			</GoogleMap>
-			<Drawer width={320} placement='right' onClose={() => setSelectedVenue(undefined)} visible={!!selectedVenue}>
-				{selectedVenue && <SingleVenueDetails venue={selectedVenue} />}
-			</Drawer>
 		</React.Fragment>
 	);
 };
